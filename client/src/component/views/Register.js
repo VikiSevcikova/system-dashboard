@@ -49,8 +49,8 @@ const Register = ({history}) => {
     <form className="form" onSubmit={registerHandler}>
       <h2 className="form-title">Register</h2>
       {error && <span className="error">{error}</span>}
-      <div class="input-group">
-          <label class="input-underlined">
+      <div className="input-group">
+          <label className="input-underlined">
             <input
               required
               type="text"
@@ -59,12 +59,12 @@ const Register = ({history}) => {
               onChange={(e) => setUsername(e.target.value)}
               tabIndex={1}
             />
-            <span class="input-label">Username</span>
+            <span className="input-label">Username</span>
           </label>
         </div>
 
-      <div class="input-group">
-          <label class="input-underlined">
+      <div className="input-group">
+          <label className="input-underlined">
             <input
               required
               type="text"
@@ -73,12 +73,12 @@ const Register = ({history}) => {
               onChange={(e) => setEmail(e.target.value)}
               tabIndex={2}
             />
-            <span class="input-label">Email</span>
+            <span className="input-label">Email</span>
           </label>
         </div>
 
-        <div class="input-group">
-          <label class="input-underlined">
+        <div className="input-group">
+          <label className="input-underlined">
             <input
               required
               type="password"
@@ -87,12 +87,12 @@ const Register = ({history}) => {
               onChange={(e) => setPassword(e.target.value)}
               tabIndex={3}
             />
-            <span class="input-label">Password</span>
+            <span className="input-label">Password</span>
           </label>
         </div>
 
-        <div class="input-group">
-          <label class="input-underlined">
+        <div className="input-group">
+          <label className="input-underlined">
             <input
               required
               type="password"
@@ -101,7 +101,7 @@ const Register = ({history}) => {
               onChange={(e) => setConfirmPassword(e.target.value)}
               tabIndex={4}
             />
-            <span class="input-label">Confirm Password</span>
+            <span className="input-label">Confirm Password</span>
           </label>
         </div>
      

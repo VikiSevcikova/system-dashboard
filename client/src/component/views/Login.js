@@ -41,8 +41,8 @@ const Login = ({ history }) => {
       <form onSubmit={loginHandler} className="form">
         <h2 className="form-title">Login</h2>
         {error && <span>{error}</span>}
-        <div class="input-group">
-          <label class="input-underlined">
+        <div className="input-group">
+          <label className="input-underlined">
             <input
               required
               type="text"
@@ -51,12 +51,12 @@ const Login = ({ history }) => {
               onChange={(e) => setEmail(e.target.value)}
               tabIndex={1}
             />
-            <span class="input-label">Email</span>
+            <span className="input-label">Email</span>
           </label>
         </div>
        
-        <div class="input-group">
-          <label class="input-underlined">
+        <div className="input-group">
+          <label className="input-underlined">
             <input
               required
               type="password"
@@ -65,7 +65,7 @@ const Login = ({ history }) => {
               onChange={(e) => setPassword(e.target.value)}
               tabIndex={2}
             />
-            <span class="input-label">Password</span>
+            <span className="input-label">Password</span>
           </label>
         </div>
 
