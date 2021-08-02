@@ -13,7 +13,7 @@ const Register = ({history}) => {
     if(localStorage.getItem("authToken")) history.push("/");
   },[history]);
 
-  const registerHandler = (e) => {
+  const registerHandler = async (e) => {
     e.preventDefault();
     const config = {
       header: {
@@ -45,41 +45,70 @@ const Register = ({history}) => {
   }
 
   return (
-   <div>
-    <form onSubmit={registerHandler}>
-      <h3>Register</h3>
-      {error && <span>{error}</span>}
-      <div>
-        <label htmlFor="name">
-          Username:
-        </label>
-        <input type="text" required id="name" placeholder="Enter username" value={username} onChange={(e)=>setUsername(e.target.value)} tabIndex={1}/>
-      </div>
+   <div className="container">
+    <form className="form" onSubmit={registerHandler}>
+      <h2 className="form-title">Register</h2>
+      {error && <span className="error">{error}</span>}
+      <div class="input-group">
+          <label class="input-underlined">
+            <input
+              required
+              type="text"
+              id="name"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              tabIndex={1}
+            />
+            <span class="input-label">Username</span>
+          </label>
+        </div>
 
-      <div>
-        <label htmlFor="email">
-          Email:
-        </label>
-        <input type="text" required id="email" placeholder="Enter email" value={email} onChange={(e)=>setEmail(e.target.value)} tabIndex={2}/>
-      </div>
+      <div class="input-group">
+          <label class="input-underlined">
+            <input
+              required
+              type="text"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              tabIndex={2}
+            />
+            <span class="input-label">Email</span>
+          </label>
+        </div>
 
-      <div>
-        <label htmlFor="password">
-          Password:
-        </label>
-        <input type="text" required id="password" placeholder="Enter password" value={password} onChange={(e)=>setPassword(e.target.value)} tabIndex={3}/>
-      </div>
+        <div class="input-group">
+          <label class="input-underlined">
+            <input
+              required
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              tabIndex={3}
+            />
+            <span class="input-label">Password</span>
+          </label>
+        </div>
 
-      <div>
-        <label htmlFor="confirmPassword">
-          Confirm Password:
-        </label>
-        <input type="text" required id="confirmPassword" placeholder="Confirm password" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} tabIndex={4}/>
-      </div>
-      <button type="submit" tabIndex={5}>
+        <div class="input-group">
+          <label class="input-underlined">
+            <input
+              required
+              type="password"
+              id="confirmPassword"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              tabIndex={4}
+            />
+            <span class="input-label">Confirm Password</span>
+          </label>
+        </div>
+     
+      <button className="btn" type="submit" tabIndex={5}>
         Register
       </button>
-      <span>Already have an account? <Link to="/login" tabIndex={6}>Login</Link></span>
+      <span className="form-text">Already have an account? <Link className="form-link" to="/login" tabIndex={6}>Login</Link></span>
     </form>
    </div>
   );

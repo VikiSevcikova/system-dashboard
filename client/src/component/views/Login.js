@@ -11,7 +11,7 @@ const Login = ({ history }) => {
     if (localStorage.getItem("authToken")) history.push("/");
   }, [history]);
 
-  const loginHandler = (e) => {
+  const loginHandler = async (e) => {
     e.preventDefault();
     const config = {
       header: {
@@ -25,7 +25,6 @@ const Login = ({ history }) => {
         { email, password },
         config
       );
-
       localStorage.setItem("authToken", data.token);
 
       history.push("/");
@@ -38,41 +37,46 @@ const Login = ({ history }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={loginHandler}>
-        <h3>Login</h3>
+    <div className="container">
+      <form onSubmit={loginHandler} className="form">
+        <h2 className="form-title">Login</h2>
         {error && <span>{error}</span>}
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="text"
-            required
-            id="email"
-            placeholder="Enter email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            tabIndex={1}
-          />
+        <div class="input-group">
+          <label class="input-underlined">
+            <input
+              required
+              type="text"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              tabIndex={1}
+            />
+            <span class="input-label">Email</span>
+          </label>
+        </div>
+       
+        <div class="input-group">
+          <label class="input-underlined">
+            <input
+              required
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              tabIndex={2}
+            />
+            <span class="input-label">Password</span>
+          </label>
         </div>
 
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="text"
-            required
-            id="password"
-            placeholder="Enter password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            tabIndex={2}
-          />
-        </div>
-
-        <button type="submit" tabIndex={3}>
+        <button className="btn" type="submit" tabIndex={3}>
           Login
         </button>
-        <span>
-          Don't have account yet? <Link to="/register" tabIndex={4}>Register</Link >
+        <span className="form-text">
+          Don't have account yet?
+          <Link className="form-link" to="/register" tabIndex={4}>
+            Register
+          </Link>
         </span>
       </form>
     </div>

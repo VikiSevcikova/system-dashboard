@@ -1,0 +1,110 @@
+.container{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-title{
+    color: rgb(10, 68, 151);
+    text-transform: uppercase;
+}
+
+.form-link{
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: all 0.2s;
+}
+
+.form-link:hover{
+    color: rgb(10, 68, 151);
+}
+
+.form-text{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.form{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center; 
+
+    width: 380px;
+    height: 400px;
+    padding: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    background: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+
+}
+
+div.input-group {
+    position: relative;
+    width: 100%;
+  }
+
+/*rgb(10, 68, 151)*/
+.input-underlined > input {
+	border: none;
+	border-bottom: 0.125rem solid rgb(10, 68, 151);
+    background-color: transparent;
+	width: 100%;
+	height: 2rem;
+	font-size: 1.0625rem;
+	line-height: 147.6%;
+	padding-top: 0.825rem;
+}
+
+.input-underlined > input:focus {
+	outline: none;
+}
+
+.input-underlined > .input-label{
+	position: absolute;
+	top: 0.9375rem;
+	left: 0.5rem;
+	line-height: 147.6%;
+	color: rgb(10, 68, 151);
+	transition: top .2s;
+}
+
+.input-underlined > input:hover{
+	background:rgba(10, 69, 151, 0.20);
+}
+
+.input-underlined > input:focus + .input-label,
+.input-underlined > input:valid + .input-label {
+	top: 0;
+	font-size: 0.9375rem;
+	margin-bottom: 32px;;
+}
+
+.input-underlined > input:focus + .input-label{
+	color: rgb(10, 68, 151);
+}
+
+.input-underlined > input:focus{
+	border-color: rgb(10, 68, 151);
+}
+
+.btn{
+    background-color: rgb(10, 68, 151);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    border-radius: 15px;
+    color:white;
+    border: none;
+    height: 2.875rem;
+    width: 8.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn:hover{
+    background-color: rgba(10, 69, 151, 0.8);
+}
+

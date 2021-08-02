@@ -11,7 +11,8 @@ const Dashboard = ({ history }) => {
     }
     const fetchData = async () => {
       const config = {
-        header: {
+        //headers not header!!
+        headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("authToken")}`,
         },
@@ -19,8 +20,10 @@ const Dashboard = ({ history }) => {
 
       try {
         const { data } = await axios.get("/dashboard", config);
+        console.log(data);
         setData(data.data);
       } catch (error) {
+        console.log('error ');
         localStorage.removeItem("authToken");
         setError("You are not logged. Please log in.");
       }
@@ -37,7 +40,7 @@ const Dashboard = ({ history }) => {
     <span>{error}</span>
   ) : (
     <>
-      <div style={{ background: "green", color: "white" }}>{data}</div>
+      <div style={{ background: "green", color: "white" }}>{data.message} - {data.platform}</div>
       <button onClick={logoutHandler}>Logout</button>
     </>
   );
