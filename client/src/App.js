@@ -7,6 +7,7 @@ import DashboardRoute from './component/routes/DashboardRoute';
 import Dashboard from './component/views/Dashboard';
 import Login from './component/views/Login';
 import Register from './component/views/Register';
+import NotFound from './component/views/NotFound';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <DashboardRoute exact path="/" component={Dashboard} />
           <Route exact path="/login" component={Login}/>
           <Route exac path="/register" component={Register}/>
+          <Route component={NotFound} />
         </Switch>
       </div>
     </Router>
