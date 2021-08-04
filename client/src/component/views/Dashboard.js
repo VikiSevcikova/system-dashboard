@@ -9,7 +9,6 @@ import Uptime from "../Uptime";
 import NetworkInterfaces from "../NetworkInterfaces";
 import SystemLoad from "../SystemLoad";
 
-
 const Dashboard = ({ history }) => {
   const [error, setError] = useState("");
   const [os, setOs] = useState("");
@@ -71,21 +70,19 @@ const Dashboard = ({ history }) => {
             </div>
           </Col>
           <Col md={4}>
-          <div className="card-column">
-
-            <Uptime uptime={os.uptime} />
+            <div className="card-column">
+              <Uptime uptime={os.uptime} />
             </div>
           </Col>
           <Col md={4}>
-          <div className="card-column">
-
-            <h5>Cpus {os.cpus[0].model}</h5>
-            <div className="card-text">
-              <p>{os?.cpus.length} cpus </p>
-              <p className="small-text">
-                {os.cpus[0].model} - {os.cpus[0].speed}MHz
-              </p>
-          </div>
+            <div className="card-column">
+              <h5>Cpus {os.cpus[0].model}</h5>
+              <div className="card-text">
+                <p>{os?.cpus.length} cpus </p>
+                <p className="small-text">
+                  {os.cpus[0].model} - {os.cpus[0].speed}MHz
+                </p>
+              </div>
             </div>
           </Col>
         </Row>
