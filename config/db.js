@@ -17,16 +17,3 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
-// mongoose.connect(url, { useNewUrlParser: true }, (err, client) => {
-//   db.on('error', console.error.bind(console, 'connection error:'));
-//   db.once('open', function() {
-//     // we're connected!
-//   });
-
-//   // Storing a reference to the database so you can use it later
-//   db = client.db(dbName);
-//   const users = db.collection('users').find({});
-//   console.log(`Connected MongoDB: ${url}`);
-//   console.log(`Database: ${dbName}`);
-//   users.forEach(iterateFunc, errorFunc)
-// })

@@ -40,7 +40,7 @@ const Login = ({ history }) => {
     <div className="container">
       <form onSubmit={loginHandler} className="form">
         <h2 className="form-title">Login</h2>
-        {error && <span>{error}</span>}
+        {error && <span className="error">{error}</span>}
         <div className="input-group">
           <label className="input-underlined">
             <input

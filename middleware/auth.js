@@ -4,7 +4,6 @@ const ErrorResponse = require('../utils/errorResponse');
 
 exports.protect = async (req, res, next) => {
     let token;
-    console.log(res.headers)
 
     if(req.headers.authorization && req.headers.authorization.startsWith("Bearer")){
         //Bearer kdf9afa8fafafmakfj

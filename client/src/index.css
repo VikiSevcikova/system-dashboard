@@ -20,6 +20,7 @@ code {
 
 *{
   font-family: 'Ubuntu', sans-serif;
+  color:white;
 }
 
 .container{ 
@@ -27,6 +28,15 @@ code {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.error{
+  color: white;
+  padding: 10px;
+  font-weight: 400;
+  background-color: rgb(177, 0, 0);
+  width: 50%;
+  text-align: center;
 }
 
 .form-title{
@@ -69,6 +79,9 @@ code {
 
 div.input-group {
   position: relative;
+}
+
+.input-underlined{
   width: 100%;
 }
 
@@ -77,10 +90,9 @@ div.input-group {
 border: none;
 border-bottom: 0.125rem solid white;
   background-color: transparent;
-width: 100%;
-height: 2rem;
 font-size: 1.0625rem;
-line-height: 147.6%;
+width: 100%;
+/* line-height: 147.6%; */
 padding-top: 0.825rem;
 color:white !important;
 }
@@ -123,7 +135,30 @@ background:rgba(28, 52, 82, 0.2);
 }
 
 .btn:hover{
+  color:white;
   background-color: rgb(13, 45, 83);
+}
+
+.btn-fixed{
+  background-color: rgb(27, 93, 173);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  border-radius: 15px;
+  font-size: 1rem;
+  color:white;
+  border: none;
+  height: 2.875rem;
+  width: 8.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  
+  position: fixed;
+  top:0px;
+  right: 0px;
+}
+
+.btn-fixed:hover{
+  color:white;
+  background-color: rgb(22, 79, 148);
 }
 
 /*autofill styling */
@@ -134,4 +169,100 @@ input:-webkit-autofill:active
 {
  box-shadow: 0 0 0 30px rgb(28,52,82) inset !important;
  -webkit-text-fill-color: white;
+}
+
+.row-card{
+  padding: 1.5rem;
+  margin: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  background: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.chart-height{
+  max-height: 350px !important;
+}
+
+.card{
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  background: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  min-height: 350px;
+  max-width: 450px;
+}
+
+.card-text{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  font-size: 4rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.small-text{
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.chart-center{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.table-card{
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  background: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  max-height: 350px;
+  overflow-y: scroll;
+}
+
+table{
+  table-layout:auto;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+th, td{
+  padding: 0.5rem;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, .0); 
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2); 
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.12); 
 }
