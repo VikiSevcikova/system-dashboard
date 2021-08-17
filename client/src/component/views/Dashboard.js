@@ -48,12 +48,14 @@ const Dashboard = ({ history }) => {
   ) : (
     os && (
       <Container fluid height={"100vh"}>
+
         <div className="row-card p-0 mx-1 my-4">
           <p className="py-3 m-0">
             You got private access to your system informations.
           </p>
           <p className="py-3 m-0"> Hostname: {os.hostname}</p>
         </div>
+
         <div className="row-card mx-1 py-3">
           <Row>
             <Col>Type: {os.type}</Col>
@@ -63,17 +65,20 @@ const Dashboard = ({ history }) => {
             <Col>Release: {os.release}</Col>
           </Row>
         </div>
+
         <Row className="justify-content-between">
           <Col md={4}>
             <div className="card-column chart-height">
               <MemoryChart freeMem={os.freeMem} totalMem={os.totalMem} />
             </div>
           </Col>
+
           <Col md={4}>
             <div className="card-column">
               <Uptime uptime={os.uptime} />
             </div>
           </Col>
+
           <Col md={4}>
             <div className="card-column">
               <h5>Cpus</h5>
@@ -86,13 +91,16 @@ const Dashboard = ({ history }) => {
             </div>
           </Col>
         </Row>
+
         <Row className="table-card mx-2 my-3">
           <h5>Network Interfaces</h5>
           <NetworkInterfaces ni={os.networkInterfaces} />
         </Row>
+
         <Row className="row-card mx-2 my-3">
           <SystemLoad loadAvg={os.loadAvg} />
         </Row>
+        
         <div className="mb-5"></div>
         <button className="btn-fixed m-5" onClick={logoutHandler}>
           Logout
