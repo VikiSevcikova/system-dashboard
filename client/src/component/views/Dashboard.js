@@ -76,7 +76,7 @@ const Dashboard = ({ history }) => {
           </Col>
           <Col md={4}>
             <div className="card-column">
-              <h5>Cpus {os.cpus[0].model}</h5>
+              <h5>Cpus</h5>
               <div className="card-text">
                 <p>{os?.cpus.length} cpus </p>
                 <p className="small-text">

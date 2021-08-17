@@ -26,7 +26,7 @@ const MemoryChart = ({ freeMem, totalMem }) => {
       },
       title: {
         display: true,
-        text: "Available Memory in GB",
+        text: "Disk Space in GB",
         color: "rgb(255,255,255)",
         font: {
           family: "Ubuntu",
@@ -36,8 +36,6 @@ const MemoryChart = ({ freeMem, totalMem }) => {
         },
       },
     },
-    // rotation: 1 * Math.PI,
-    // circumference: 1 * Math.PI,
   };
   return (
     <>
