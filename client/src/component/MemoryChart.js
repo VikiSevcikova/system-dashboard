@@ -11,7 +11,7 @@ const MemoryChart = ({ freeMem, totalMem }) => {
           Math.floor(free*100)/100,
           Math.floor(used*100)/100,
         ],
-        backgroundColor: ["rgb(0,0,0)", "rgb(255,255,255)"],
+        backgroundColor: ["rgb(27, 93, 173)", "rgb(255,255,255)"],
       },
     ],
   };

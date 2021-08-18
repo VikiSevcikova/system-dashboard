@@ -7,24 +7,12 @@ if(process.platform === 'win32'){
         console.log(diskSpace)
         totalM = diskSpace.size;
         freeM = diskSpace.free;
-        // {
-        //     diskPath: 'C:',
-        //     free: 12345678,
-        //     size: 98756432
-        // }
-        // Note: `free` and `size` are in bytes
     })
 }else if(process.platform === 'linux' || process.platform === 'darwin'){
     checkDiskSpace('/mnt/').then((diskSpace) => {
         console.log(diskSpace)
         totalM = diskSpace.size;
         freeM = diskSpace.free;
-        // {
-        //     diskPath: 'C:',
-        //     free: 12345678,
-        //     size: 98756432
-        // }
-        // Note: `free` and `size` are in bytes
     })
 }
 
